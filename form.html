@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>First Name Validation</title>
+<script>
+    function validateFirstName() {
+        var firstNameInput = document.getElementById("firstName").value;
+        var firstNamePattern = /^[A-Z][a-z]*$/; // Regular expression to match capital letter followed by lowercase letters
+        if (firstNamePattern.test(firstNameInput)) {
+            alert("First name is valid!");
+        } else {
+            alert("Please enter a valid first name starting with a capital letter.");
+        }
+    }
+</script>
+</head>
+<body>
+
+<form onsubmit="return false;">
+    <label for="firstName">First Name:</label>
+    <input type="text" id="firstName" name="firstName">
+    <button onclick="validateFirstName()">Validate</button>
+</form>
+
+</body>
+</html>
